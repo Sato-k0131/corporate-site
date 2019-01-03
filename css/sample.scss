@@ -23,14 +23,15 @@ html {
 }
 
 p {
-    @include fontsize();
+@include fontsize(15);
+    margin-top: 10px;
 }
 
 
 /* Header
 ------------------------------------------------------------*/
 header {
-    background: $gray_blue;
+    background-color: $gray_blue;
 
     #header_in{
         padding-top: 10px;
@@ -97,7 +98,7 @@ header {
                 padding: 0;
                 
                 a{
-                    color: #626262;
+                    color: $gray;
                     text-decoration: none;
                     font-weight: bold;
                     @include fontsize(14);
@@ -332,7 +333,7 @@ h1{
             margin-left: 70px;
         }
     }
-    // min-width; 551px
+    // min-width: 551px
 }
 // cover area
 
@@ -349,7 +350,7 @@ h1{
     // min-width: 551px
     
     .columns{
-        color: 626262;
+        color: $gray;
         .service_title{
             @include fontsize(18);
             font-weight: bold;
