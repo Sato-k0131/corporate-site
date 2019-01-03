@@ -444,6 +444,7 @@ h1{
 
 /* ===================
     - 会社概要
+    - ニュースリリース
 =================== */
 #sub_cover{
     
@@ -506,10 +507,25 @@ h1{
         th{
             padding-right: 20px;
         }
+        
+        .news_li{
+            @include fontsize(15);
+            
+            li{
+                list-style: none;
+                span{
+                    color: #42b9d0;
+                    display: block; // インライン要素(たかさ指定不可)→ブロック要素 ⇒ 0000-00-00を自動的に改行
+                    font-weight: bold;
+                    margin-bottom: 3px;
+                }
+            }
+        }
     
     }
     
     #sidebar{
+        padding-bottom: 20px;
         .pc_sidemenu{
             display: none;
             h3{
@@ -563,6 +579,20 @@ h1{
                 @include fontsize(20);
                 padding-bottom: 20px;
             }
+
+        .news_li{
+            li{
+                list-style: none;
+                padding-bottom: 5px;    
+            
+                span{
+                    display: inline-block; // ブロック要素(自動改行)→インライン要素 ⇒ PCの時は0000-00-00を改行しない
+                    margin-bottom: 0;
+                    padding-right: 10px;
+                }
+            }
+        }
+
         }
 
         #sidebar{
